@@ -1,7 +1,8 @@
+with Adastra.Types; use Adastra.Types;
+
 package Adastra.Angles is
-    Pi : constant := 3.14159_26535_89793_23846;
-    type Angle_Radians is delta 0.001 range 0.0 .. (2.0 * Pi);
-    type Angle_Degrees is delta 0.01 range 0.0 .. 360.0;
+    type Angle_Radians is new Precision_Float range 0.0 .. (2.0 * Pi);
+    type Angle_Degrees is new Precision_Float range 0.0 .. 360.0;
 
     type Angle_Sex is record
         Degrees : Natural range 0 .. 360;
