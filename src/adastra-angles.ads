@@ -10,7 +10,7 @@ package Adastra.Angles is
         Seconds : Natural range 0 .. 59;
     end record;
 
-    function Angle_Degrees_To_Radians (Deg: Angle_Degrees) return Angle_Radians
-    function Angle_Radians_To_Degrees (Rad: Angle_Radians) return Angle_Degrees
-    function Angle_Sex_To_Degrees (Sex: Angle_Sex) return Angle_Degrees
+    function Angle_Degrees_To_Radians (Deg: Angle_Degrees) return Angle_Radians;
+    function Angle_Radians_To_Degrees (Rad: Angle_Radians) return Angle_Degrees;
+    function Angle_Sex_To_Degrees (Sex: Angle_Sex) return Angle_Degrees;
 end Adastra.Angles;
