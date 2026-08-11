@@ -1,22 +1,22 @@
 package body Adastra.Angles is
 
-    function Angle_Decimals_To_Radians (Deg: Angle_Decimals) return Angle_Radians is
+    function Angle_Deg_To_Rad (Deg: Angle_Deg) return Angle_Rad is
         -- Convert decimal degrees to radians
     begin
-        return Angle_Radians (Pi / 180.0 * Deg);
+        return Angle_Rad (Pi / 180.0 * Deg);
     end
 
-    function Angle_Radians_To_Decimals (Rad: Angle_Radians) return Angle_Decimals is
+    function Angle_Rad_To_Deg (Rad: Angle_Rad) return Angle_Deg is
         -- Convert radians to decimal degrees
     begin
-        return Angle_Decimals (180.0 / Pi * Rad);
+        return Angle_Deg (180.0 / Pi * Rad);
     end
 
-    function Angle_DMS_To_Decimals (Sex: Angle_DMS) return Angle_Decimals is
+    function Angle_Dms_To_Deg (Dms: Angle_Dms) return Angle_Deg is
         -- Convert sexagesimal degrees to decimal degrees
     begin
-        return Angle_Decimals (Sex.Decimals) + Angle_Decimals (Sex.Minutes) / 60.0 +
-                Angle_Decimals (Sex.Seconds) / 3600.0;
+        return Angle_Deg (Dms.Degrees) + Angle_Deg (Dms.Minutes) / 60.0 +
+                Angle_Deg (Dms.Seconds) / 3600.0;
     end
 
 end Adastra.Angles;

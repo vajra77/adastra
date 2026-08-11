@@ -2,7 +2,7 @@ with Adastra.Types; use Adastra.Types;
 
 package body Adastra.Zodiac is
 
-    function Ecliptic_To_Zodiac (Ecliptic_Deg: Angle_Degrees) return Zodiac_Position is
+    function Ecliptic_To_Zodiac (Ecliptic_Deg: Angle_Deg) return Zodiac_Position is
         Total_Val  : constant Precision_Float := Precision_Float (Ecliptic_Deg);
         Sign_Index : constant Natural := Natural (Precision_Float'Floor (Total_Val / 30.0));
         Rem_Deg    : constant Precision_Float := Total_Val - (Precision_Float (Sign_Index) * 30.0);

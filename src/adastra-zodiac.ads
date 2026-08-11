@@ -14,5 +14,5 @@ package Adastra.Zodiac is
           Seconds : Natural range 0 .. 59;
     end record;
 
-    function Ecliptic_To_Zodiac (Ecliptic_Deg: Angle_Degrees) return Zodiac_Position;
+    function Ecliptic_To_Zodiac (Ecliptic_Deg: Angle_Deg) return Zodiac_Position;
 end Adastra.Zodiac;
