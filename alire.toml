@@ -1,0 +1,10 @@
+name = "adastra"
+description = "Library for Astronomical/Astrological computations"
+version = "0.1.0-dev"
+
+authors = ["Francesco Ferreri"]
+maintainers = ["Francesco Ferreri <f.ferreri@namex.it>"]
+maintainers-logins = ["vajra77"]
+licenses = "GPL-3.0-or-later"
+website = ""
+tags = ["astrology", "zodiac", "birthchart"]
