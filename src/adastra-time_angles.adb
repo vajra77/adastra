@@ -1,8 +1,6 @@
-package body Adastra.Time is
+package body Adastra.Time_Angles is
 
-    ---------------------------------------------------------------------------
-    -- Costruttori e Getter per Time_UT
-    ---------------------------------------------------------------------------
+    -- Time methods
 
     function Make_Time_UT
       (Year    : Time_Year;
@@ -26,10 +24,6 @@ package body Adastra.Time is
     function Hour    (Self : Time_UT) return Time_Hour    is (Self.Hour);
     function Minutes (Self : Time_UT) return Time_Minutes is (Self.Minutes);
     function Seconds (Self : Time_UT) return Time_Seconds is (Self.Seconds);
-
-    ---------------------------------------------------------------------------
-    -- Metodi di calcolo per Time_UT
-    ---------------------------------------------------------------------------
 
     function Fractional_Day (Self : Time_UT) return Time_Fractional_Day is
     begin
@@ -57,10 +51,6 @@ package body Adastra.Time is
         return Time_Julian_Day (B + Precision_Float'Floor (365.25 * Y) +
                Precision_Float'Floor (30.6001 * (M + 1.0)) + D + 1_720_994.5);
     end Julian_Day;
-
-    ---------------------------------------------------------------------------
-    -- Costruttori, Getter e Metodi per Time_LCT
-    ---------------------------------------------------------------------------
 
     function Make_Time_LCT
       (Year    : Time_Year;
@@ -92,4 +82,21 @@ package body Adastra.Time is
                Time_Fractional_Day (Self.Seconds) / 86400.0;
     end Fractional_Day;
 
-end Adastra.Time;
+    -- Angles methods
+
+    function Make_Angle (Deg : Angle_Deg) return Angle is
+    begin
+        return Angle'(Value => Deg)
+    end
+
+    function Degrees (Self : Angle) return Angle_Deg is
+    begin
+        return Self.Value
+    end
+
+    function Radians (Self : Angle) return Angle_Rad is
+    begin
+        return Angle_Rad(Pi / 180.0 * Self.Value)
+    end
+
+end Adastra.Time_Angles;

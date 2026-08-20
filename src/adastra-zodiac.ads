@@ -1,4 +1,4 @@
-with Adastra.Angles; use Adastra.Angles;
+with Adastra.Time_Angles; use Adastra.Time_Angles;
 
 package Adastra.Zodiac is
 
